@@ -1,3 +1,9 @@
+'''
+You can find more detailes how to get the value of an Entry from the following artice:
+https://effbot.org/tkinterbook/entry.htm
+'''
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 import tkinter as tk
