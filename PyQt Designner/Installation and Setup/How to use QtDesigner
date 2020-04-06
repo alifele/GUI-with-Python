@@ -1,0 +1,29 @@
+After designing you GUI in the QtDesigner, if you hit the View Code item in the form menu will come up with this Error:
+
+""""Unable to launch /usr/lib/qt5/bin/uic.""""
+
+
+
+I searched online alot and I could'n find why is that there.  As you can find in this video, https://www.youtube.com/watch?v=Dmo8eZG5I2w&list=PLQVvvaa0QuDdVpDFNq4FwY9APZPGSUyR4&index=16 the instructor says that I don't know what is this error for.
+More information you can find in this page: https://stackoverflow.com/questions/13792502/unable-to-launch-qt-uic
+
+
+
+But there is no problems even with that error out there. when you install PyQt5, a useful tool will be installed. called 'pyuic'.
+
+
+
+Using this tool in command line you can convert the output of the QtDesigner (just save .ui file) to beautiful python code.
+
+
+pyuic5 untitled.ui -o untitled.py
+pyuic5 -x hello.ui -o test.py  --> this will add a bunch of extra codes to the python file that you can execute the python script
+pyuic5 -p hello.ui  --> using this you can preview the GUI. No python files will be generated
+
+
+
+You can find very useful documentation of pyuic in the link below:
+https://www.riverbankcomputing.com/static/Docs/PyQt5/designer.html
+
+And here is the PyQt refrence Guide:
+https://www.riverbankcomputing.com/static/Docs/PyQt5/index.html
