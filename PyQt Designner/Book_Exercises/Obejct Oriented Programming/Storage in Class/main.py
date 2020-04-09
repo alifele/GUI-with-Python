@@ -11,26 +11,30 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_Dialog(object):
-    def setupUi(self, Dialog):
+
+
+
+
+    def setupUi(self, Dialog, mname):
         Dialog.setObjectName("Dialog")
         Dialog.resize(400, 300)
-
-        self.timer = QtCore.QTimer(Dialog)
-
-        self.Time = QtWidgets.QLCDNumber(Dialog)
-        self.Time.setGeometry(QtCore.QRect(40, 110, 341, 101))
-        self.Time.setSmallDecimalPoint(False)
-        self.Time.setSegmentStyle(QtWidgets.QLCDNumber.Filled)
-        self.Time.setObjectName("Time")
-        self.Time.setDigitCount(8)
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(60, 50, 161, 41))
+        self.label.setGeometry(QtCore.QRect(40, 190, 141, 61))
         self.label.setObjectName("label")
+        self.pushButton = QtWidgets.QPushButton(Dialog)
+        self.pushButton.setGeometry(QtCore.QRect(210, 180, 111, 81))
+        self.pushButton.setObjectName("pushButton")
+        self.lineEdit = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit.setGeometry(QtCore.QRect(30, 70, 301, 41))
+        self.lineEdit.setObjectName("lineEdit")
 
         self.retranslateUi(Dialog)
+
+        self.pushButton.clicked.connect(mname.show_name)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label.setText(_translate("Dialog", "Time is :"))
+        self.label.setText(_translate("Dialog", "TextLabel"))
+        self.pushButton.setText(_translate("Dialog", "PushButton"))

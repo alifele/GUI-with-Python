@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>539</width>
+    <height>482</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QCalendarWidget" name="calendar">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>456</width>
+     <height>171</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="nDays">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>260</y>
+     <width>111</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="calculate">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>320</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;calculate</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="resultShow">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>370</y>
+     <width>261</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please &lt;/p&gt;&lt;p&gt;Select ...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>230</y>
+     <width>151</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select number of days</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>230</y>
+     <width>151</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select Room Type</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="roomType">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>260</y>
+     <width>181</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>single rom</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>shared room</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>shared room + hand wash</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>single room + hand wash</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>shared room + bathroom</string>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>calendar</tabstop>
+  <tabstop>nDays</tabstop>
+  <tabstop>roomType</tabstop>
+  <tabstop>calculate</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>calculate</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>update_show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>211</x>
+     <y>334</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>488</x>
+     <y>332</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>update_show()</slot>
+ </slots>
+</ui>

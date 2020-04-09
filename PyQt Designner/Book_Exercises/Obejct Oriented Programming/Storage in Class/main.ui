@@ -13,57 +13,63 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLCDNumber" name="Time">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>110</y>
-     <width>341</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <property name="smallDecimalPoint">
-    <bool>false</bool>
-   </property>
-   <property name="segmentStyle">
-    <enum>QLCDNumber::Filled</enum>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>50</y>
-     <width>161</width>
-     <height>41</height>
+     <x>40</x>
+     <y>190</y>
+     <width>141</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="text">
-    <string>Time is :</string>
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>180</y>
+     <width>111</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>70</y>
+     <width>301</width>
+     <height>41</height>
+    </rect>
    </property>
   </widget>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>Dialog</sender>
-   <signal>TTTTTime()</signal>
-   <receiver>Time</receiver>
-   <slot>setHexMode()</slot>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>show_name()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>357</x>
-     <y>172</y>
+     <x>265</x>
+     <y>222</y>
     </hint>
     <hint type="destinationlabel">
-     <x>188</x>
-     <y>186</y>
+     <x>261</x>
+     <y>146</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <signal>TTTTTime()</signal>
-  <slot>TTTTTTtimeUpdate()</slot>
+  <slot>show_name()</slot>
  </slots>
 </ui>

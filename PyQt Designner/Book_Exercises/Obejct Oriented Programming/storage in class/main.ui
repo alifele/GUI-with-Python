@@ -6,64 +6,70 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>505</width>
+    <height>281</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLCDNumber" name="Time">
+  <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>110</y>
-     <width>341</width>
-     <height>101</height>
+     <x>90</x>
+     <y>130</y>
+     <width>231</width>
+     <height>61</height>
     </rect>
    </property>
-   <property name="smallDecimalPoint">
-    <bool>false</bool>
+   <property name="text">
+    <string>Show</string>
    </property>
-   <property name="segmentStyle">
-    <enum>QLCDNumber::Filled</enum>
+  </widget>
+  <widget class="QLineEdit" name="name">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>90</y>
+     <width>291</width>
+     <height>21</height>
+    </rect>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>50</y>
-     <width>161</width>
-     <height>41</height>
+     <x>90</x>
+     <y>60</y>
+     <width>171</width>
+     <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>Time is :</string>
+    <string>Enter you name</string>
    </property>
   </widget>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>Dialog</sender>
-   <signal>TTTTTime()</signal>
-   <receiver>Time</receiver>
-   <slot>setHexMode()</slot>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>show_dialog()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>357</x>
-     <y>172</y>
+     <x>282</x>
+     <y>166</y>
     </hint>
     <hint type="destinationlabel">
-     <x>188</x>
-     <y>186</y>
+     <x>356</x>
+     <y>197</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <signal>TTTTTime()</signal>
-  <slot>TTTTTTtimeUpdate()</slot>
+  <slot>show_dialog()</slot>
  </slots>
 </ui>
